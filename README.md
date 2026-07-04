@@ -220,7 +220,7 @@ $mnemonic = Tron::mnemonicGenerate(15);
 echo 'Mnemonic: ' . implode(' ', $mnemonic);
 
 // Create wallet from mnemonic
-$wallet = Tron::createWallet('My Wallet', $mnemonic);
+$wallet = Tron::createWallet(name: 'My Wallet', mnemonic: $mnemonic);
 ```
 
 ### 4. Create an Address
@@ -401,7 +401,7 @@ use ItHealer\LaravelTron\Models\TronTRC20;
 $contractAddress = 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t';
 
 $token = TronTRC20::create([
-    'contract_address' => $contractAddress,
+    'address' => $contractAddress,
     'name' => 'Tether USD',
     'symbol' => 'USDT',
     'decimals' => 6,
