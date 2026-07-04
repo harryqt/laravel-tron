@@ -178,10 +178,10 @@ Create a custom webhook handler to process deposit events:
 ```php
 namespace App\Handlers;
 
-use ItHealer\LaravelTron\Handlers\WebhookHandler;
+use ItHealer\LaravelTron\Handlers\WebhookHandlerInterface;
 use ItHealer\LaravelTron\Models\TronDeposit;
 
-class CustomWebhookHandler extends WebhookHandler
+class CustomWebhookHandler implements WebhookHandlerInterface
 {
     public function handle(TronDeposit $deposit): void
     {
